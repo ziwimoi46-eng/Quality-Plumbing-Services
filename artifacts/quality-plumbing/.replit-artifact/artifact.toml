@@ -18,8 +18,7 @@ localPort = 20993
 run = "pnpm --filter @workspace/quality-plumbing run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/quality-plumbing", "run", "build" ]
-publicDir = "artifacts/quality-plumbing/dist/public"
+publicDir = "artifacts/quality-plumbing"
 serve = "static"
 
 [[services.production.rewrites]]
@@ -28,4 +27,3 @@ to = "/index.html"
 
 [services.env]
 PORT = "20993"
-BASE_PATH = "/"
